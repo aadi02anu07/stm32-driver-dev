@@ -1,0 +1,42 @@
+16:00:36 **** Build of configuration Debug for project f446re_drive ****
+make -j12 all 
+arm-none-eabi-gcc "../drivers/Src/stm32f446xx_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"E:/DRDO internship/nuc/f446re_drive/Src" -I"E:/DRDO internship/nuc/f446re_drive/drivers/Inc" -I"E:/DRDO internship/nuc/f446re_drive/drivers/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"drivers/Src/stm32f446xx_gpio_driver.d" -MT"drivers/Src/stm32f446xx_gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "drivers/Src/stm32f446xx_gpio_driver.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/001led_toggle_f446re.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"E:/DRDO internship/nuc/f446re_drive/Src" -I"E:/DRDO internship/nuc/f446re_drive/drivers/Inc" -I"E:/DRDO internship/nuc/f446re_drive/drivers/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/001led_toggle_f446re.d" -MT"Src/001led_toggle_f446re.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/001led_toggle_f446re.o"
+In file included from E:/DRDO internship/nuc/f446re_drive/drivers/Inc/stm32f446xx_gpio_driver.h:12,
+                 from ../drivers/Src/stm32f446xx_gpio_driver.c:9:
+../drivers/Src/stm32f446xx_gpio_driver.c: In function 'GPIO_PeriClockControl':
+E:/DRDO internship/nuc/f446re_drive/drivers/Inc/stm32f446xx.h:273:58: error: 'GPIOI_BASEADDR' undeclared (first use in this function); did you mean 'GPIOB_BASEADDR'?
+  273 | #define GPIOI                           ((GPIO_RegDef_t*)GPIOI_BASEADDR)
+      |                                                          ^~~~~~~~~~~~~~
+../drivers/Src/stm32f446xx_gpio_driver.c:54:37: note: in expansion of macro 'GPIOI'
+   54 |                 }else if (pGPIOx == GPIOI)
+      |                                     ^~~~~
+E:/DRDO internship/nuc/f446re_drive/drivers/Inc/stm32f446xx.h:273:58: note: each undeclared identifier is reported only once for each function it appears in
+  273 | #define GPIOI                           ((GPIO_RegDef_t*)GPIOI_BASEADDR)
+      |                                                          ^~~~~~~~~~~~~~
+../drivers/Src/stm32f446xx_gpio_driver.c:54:37: note: in expansion of macro 'GPIOI'
+   54 |                 }else if (pGPIOx == GPIOI)
+      |                                     ^~~~~
+../drivers/Src/stm32f446xx_gpio_driver.c: In function 'GPIO_Init':
+E:/DRDO internship/nuc/f446re_drive/drivers/Inc/stm32f446xx.h:273:58: error: 'GPIOI_BASEADDR' undeclared (first use in this function); did you mean 'GPIOB_BASEADDR'?
+  273 | #define GPIOI                           ((GPIO_RegDef_t*)GPIOI_BASEADDR)
+      |                                                          ^~~~~~~~~~~~~~
+E:/DRDO internship/nuc/f446re_drive/drivers/Inc/stm32f446xx.h:390:79: note: in expansion of macro 'GPIOI'
+  390 |                                                                         (x == GPIOI)?8:0)
+      |                                                                               ^~~~~
+../drivers/Src/stm32f446xx_gpio_driver.c:128:36: note: in expansion of macro 'GPIO_BASEADDR_TO_CODE'
+  128 |                 uint8_t portcode = GPIO_BASEADDR_TO_CODE(pGPIOHandle->pGPIOx);
+      |                                    ^~~~~~~~~~~~~~~~~~~~~
+../drivers/Src/stm32f446xx_gpio_driver.c: In function 'GPIO_DeInit':
+E:/DRDO internship/nuc/f446re_drive/drivers/Inc/stm32f446xx.h:273:58: error: 'GPIOI_BASEADDR' undeclared (first use in this function); did you mean 'GPIOB_BASEADDR'?
+  273 | #define GPIOI                           ((GPIO_RegDef_t*)GPIOI_BASEADDR)
+      |                                                          ^~~~~~~~~~~~~~
+../drivers/Src/stm32f446xx_gpio_driver.c:207:29: note: in expansion of macro 'GPIOI'
+  207 |         }else if (pGPIOx == GPIOI)
+      |                             ^~~~~
+make: *** [drivers/Src/subdir.mk:19: drivers/Src/stm32f446xx_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+16:00:36 Build Failed. 4 errors, 0 warnings. (took 555ms)
+

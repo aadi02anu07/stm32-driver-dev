@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="false"/>
+	<list key="searchhistory">
+		<item value="GPIO_ToggleOutputPin"/>
+		<item value="GpioLed.pGPIOx = GPIOA"/>
+		<item value="GpioLed.pGPIOx = GPIOA;"/>
+		<item value="GPIOA_PCLK_EN"/>
+		<item value="GPIOA_PCLK_E"/>
+		<item value="GPIOA_PCLK_EN()"/>
+		<item value="AHB1ENR"/>
+		<item value="rcc"/>
+		<item value="GPIOI"/>
+		<item value="GPIO_RegDef_t"/>
+		<item value="407"/>
+		<item value="447"/>
+	</list>
+</section>
