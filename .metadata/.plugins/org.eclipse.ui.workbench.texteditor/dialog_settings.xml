@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item key="hasShownOverlayPopupBefore" value="true"/>
-	<item key="replaceBarOpen" value="false"/>
+	<item key="replaceBarOpen" value="true"/>
 	<list key="searchhistory">
+		<item value="stm32f407xx"/>
+		<item value="SPIConfig"/>
 		<item value="GPIO_ToggleOutputPin"/>
 		<item value="GpioLed.pGPIOx = GPIOA"/>
 		<item value="GpioLed.pGPIOx = GPIOA;"/>
@@ -15,5 +17,8 @@
 		<item value="GPIO_RegDef_t"/>
 		<item value="407"/>
 		<item value="447"/>
+	</list>
+	<list key="replacehistory">
+		<item value="stm32f446xx"/>
 	</list>
 </section>

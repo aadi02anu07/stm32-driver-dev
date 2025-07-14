@@ -386,8 +386,8 @@ typedef struct
 								        (x == GPIOE)?4:\
 								        (x == GPIOF)?5:\
 								        (x == GPIOG)?6:\
-								        (x == GPIOH)?7: \
-								        (x == GPIOI)?8:0)
+								        (x == GPIOH)?7:0)
+//								        (x == GPIOI)?8:0)
 
 
 /*
@@ -614,8 +614,8 @@ typedef struct
 #define USART_SR_CTS        			9
 
 #include <stm32f446xx_gpio_driver.h>
+#include "stm32f446xx_spi_driver.h"
 /*
-#include "stm32f407xx_spi_driver.h"
 #include "stm32f407xx_i2c_driver.h"
 #include "stm32f407xx_usart_driver.h"
 #include "stm32f407xx_rcc_driver.h"

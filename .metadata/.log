@@ -2811,3 +2811,63 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 E:\DRDO internship\Nuc
 
 !ENTRY org.eclipse.cdt.core 1 0 2025-07-09 16:08:15.503
 !MESSAGE Indexed 'f446re_drivers' (2 sources, 10 headers) in 0.437 sec: 267 declarations; 1,283 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2025-07-12 18:38:22.825 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-12 18:39:43.731
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-12 18:39:43.734
+!MESSAGE Log4j2 initialized with config file E:\DRDO internship\Nucleo\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-12 18:39:57.614
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-07-14 10:22:14.041 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-14 10:23:28.235
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-14 10:23:28.239
+!MESSAGE Log4j2 initialized with config file E:\DRDO internship\Nucleo\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-14 10:23:47.004
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-07-14 14:38:28.819 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-14 14:39:31.977
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-14 14:39:31.981
+!MESSAGE Log4j2 initialized with config file E:\DRDO internship\Nucleo\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-14 14:39:49.912
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-07-14 21:49:23.626 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-14 21:55:51.346
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-14 21:55:51.349
+!MESSAGE Log4j2 initialized with config file E:\DRDO internship\Nucleo\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-14 21:56:10.078
+!MESSAGE Started RMI Server, listening on port 41337
