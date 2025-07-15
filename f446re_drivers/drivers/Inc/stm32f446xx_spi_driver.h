@@ -1,8 +1,8 @@
 /*
  * stm32f446xx_spi_driver.h
  *
- *  Created on: Feb 9, 2019
- *      Author: admin
+ *  Created on: July 9, 2025
+ *      Author: Aditya
  */
 
 #ifndef INC_STM32F446XX_SPI_DRIVER_H_
@@ -22,6 +22,7 @@ typedef struct
 	uint8_t SPI_CPOL;
 	uint8_t SPI_CPHA;
 	uint8_t SPI_SSM;
+	uint8_t SPI_SPE;
 }SPI_Config_t;
 
 

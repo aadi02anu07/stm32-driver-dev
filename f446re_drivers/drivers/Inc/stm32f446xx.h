@@ -1,8 +1,8 @@
 /*
- * stm3f407xx.h
+ * stm3f446xx.h
  *
- *  Created on: Jan 29, 2019
- *      Author: admin
+ *  Created on: June 20, 2025
+ *      Author: Aditya
  */
 
 #ifndef INC_STM3F446XX_H_
@@ -104,6 +104,7 @@
  */
 #define EXTI_BASEADDR						(APB2PERIPH_BASEADDR + 0x3C00)
 #define SPI1_BASEADDR						(APB2PERIPH_BASEADDR + 0x3000)
+#define SPI4_BASEADDR						(APB2PERIPH_BASEADDR + 0x3400)
 #define SYSCFG_BASEADDR        				(APB2PERIPH_BASEADDR + 0x3800)
 #define USART1_BASEADDR						(APB2PERIPH_BASEADDR + 0x1000)
 #define USART6_BASEADDR						(APB2PERIPH_BASEADDR + 0x1400)
@@ -280,11 +281,11 @@ typedef struct
 #define SPI1  				((SPI_RegDef_t*)SPI1_BASEADDR)
 #define SPI2  				((SPI_RegDef_t*)SPI2_BASEADDR)
 #define SPI3  				((SPI_RegDef_t*)SPI3_BASEADDR)
+#define SPI4 				((SPI_RegDef_t*)SPI4_BASEADDR)
 
 #define I2C1  				((I2C_RegDef_t*)I2C1_BASEADDR)
 #define I2C2  				((I2C_RegDef_t*)I2C2_BASEADDR)
 #define I2C3  				((I2C_RegDef_t*)I2C3_BASEADDR)
-
 #define USART1  			((USART_RegDef_t*)USART1_BASEADDR)
 #define USART2  			((USART_RegDef_t*)USART2_BASEADDR)
 #define USART3  			((USART_RegDef_t*)USART3_BASEADDR)
@@ -344,11 +345,21 @@ typedef struct
  * Clock Disable Macros for GPIOx peripherals
  */
 #define GPIOA_PCLK_DI()	 (RCC->AHB1ENR &= ~(1 << 0))
+#define GPIOB_PCLK_DI()	 (RCC->AHB1ENR &= ~(1 << 1))
+#define GPIOC_PCLK_DI()	 (RCC->AHB1ENR &= ~(1 << 2))
+#define GPIOD_PCLK_DI()	 (RCC->AHB1ENR &= ~(1 << 3))
+#define GPIOE_PCLK_DI()	 (RCC->AHB1ENR &= ~(1 << 4))
+#define GPIOF_PCLK_DI()	 (RCC->AHB1ENR &= ~(1 << 5))
+#define GPIOg_PCLK_DI()	 (RCC->AHB1ENR &= ~(1 << 6))
+#define GPIOH_PCLK_DI()	 (RCC->AHB1ENR &= ~(1 << 7))
 
 /*
  * Clock Disable Macros for SPIx peripherals
  */
-
+#define SPI1_PCLK_DI()	(RCC-> APB2ENR &= ~(1 << 12))
+#define SPI2_PCLK_DI()	(RCC-> APB1ENR &= ~(1 << 14))
+#define SPI3_PCLK_DI()	(RCC-> APB1ENR &= ~(1 << 15))
+#define SPI4_PCLK_DI()	(RCC-> APB2ENR &= ~(1 << 13))
 /*
  * Clock Disable Macros for USARTx peripherals
  */
@@ -372,6 +383,13 @@ typedef struct
 #define GPIOH_REG_RESET()               do{ (RCC->AHB1RSTR |= (1 << 7)); (RCC->AHB1RSTR &= ~(1 << 7)); }while(0)
 //#define GPIOI_REG_RESET()               do{ (RCC->AHB1RSTR |= (1 << 8)); (RCC->AHB1RSTR &= ~(1 << 8)); }while(0)
 
+/*
+ *  Macros to reset GPIOx peripherals
+ */
+ #define SPI1_REG_RESET()	do{ (RCC->APB2RSTR |= (1 << 12)); (RCC->APB2RSTR &= ~(1 << 12)); }while(0)
+#define SPI2_REG_RESET()	do{ (RCC->APB1RSTR |= (1 << 14)); (RCC->APB1RSTR &= ~(1 << 14)); }while(0)
+#define SPI3_REG_RESET()	do{ (RCC->APB1RSTR |= (1 << 15)); (RCC->APB1RSTR &= ~(1 << 15)); }while(0)
+#define SPI4_REG_RESET()	do{ (RCC->APB2RSTR |= (1 << 13)); (RCC->APB2RSTR &= ~(1 << 13)); }while(0)
 
 /*
  *  returns port code for given GPIOx base address
@@ -403,6 +421,8 @@ typedef struct
 #define IRQ_NO_EXTI4 		10
 #define IRQ_NO_EXTI9_5 		23
 #define IRQ_NO_EXTI15_10 	40
+
+
 #define IRQ_NO_SPI1			35
 #define IRQ_NO_SPI2         36
 #define IRQ_NO_SPI3         51
@@ -420,8 +440,22 @@ typedef struct
 /*
  * macros for all the possible priority levels
  */
-#define NVIC_IRQ_PRI0    0
-#define NVIC_IRQ_PRI15    15
+#define NVIC_IRQ_PRI0    	0
+#define NVIC_IRQ_PRI1		1
+#define NVIC_IRQ_PRI2		2
+#define NVIC_IRQ_PRI3		3
+#define NVIC_IRQ_PRI4		4
+#define NVIC_IRQ_PRI5		5
+#define NVIC_IRQ_PRI6		6
+#define NVIC_IRQ_PRI7		7
+#define NVIC_IRQ_PRI8		8
+#define NVIC_IRQ_PRI9		9
+#define NVIC_IRQ_PRI10		10
+#define NVIC_IRQ_PRI11		11
+#define NVIC_IRQ_PRI12		12
+#define NVIC_IRQ_PRI13		13
+#define NVIC_IRQ_PRI14		14
+#define NVIC_IRQ_PRI15		15
 
 
 //some generic macros
@@ -432,7 +466,7 @@ typedef struct
 #define RESET 				DISABLE
 #define GPIO_PIN_SET        SET
 #define GPIO_PIN_RESET      RESET
-#define FLAG_RESET         RESET
+#define FLAG_RESET          RESET
 #define FLAG_SET 			SET
 
 
@@ -618,6 +652,5 @@ typedef struct
 /*
 #include "stm32f446xx_i2c_driver.h"
 #include "stm32f446xx_usart_driver.h"
-#include "stm32f446xx_rcc_driver.h"
 */
-#endif /* INC_STM3F407XX_H_ */
+#endif /* INC_STM3F446XX_H_ */

@@ -1,8 +1,8 @@
 /*
  * stm32f446xx_spi_driver.c
  *
- *  Created on: Feb 9, 2019
- *      Author: admin
+ *  Created on: July 9, 2025
+ *      Author: Aditya
  */
 
 #include "stm32f446xx_spi_driver.h"
@@ -13,54 +13,46 @@ static void  spi_ovr_err_interrupt_handle(SPI_Handle_t *pSPIHandle);
 
 /*********************************************************************
  * @fn      		  - SPI_PeriClockControl
- *
- * @brief             -
- *
- * @param[in]         -
- * @param[in]         -
- * @param[in]         -
- *
- * @return            -
- *
- * @Note              -
-
  */
 void SPI_PeriClockControl(SPI_RegDef_t *pSPIx, uint8_t EnorDi)
 {
-
 	if(EnorDi == ENABLE)
 	{
 		if(pSPIx == SPI1)
 		{
 			SPI1_PCLK_EN();
-		}else if (pSPIx == SPI2)
+		}else if(pSPIx == SPI2)
 		{
 			SPI2_PCLK_EN();
-		}else if (pSPIx == SPI3)
+		}else if(pSPIx == SPI2)
 		{
 			SPI3_PCLK_EN();
+		}else if(pSPIx == SPI3)
+		{
+			SPI4_PCLK_EN();
+		}
+	}else
+	{
+		if(pSPIx == SPI1)
+		{
+			SPI1_PCLK_DI();
+		}else if(pSPIx == SPI2)
+		{
+			SPI2_PCLK_DI();
+		}else if(pSPIx == SPI3)
+		{
+			SPI3_PCLK_DI();
+		}else if(pSPIx == SPI4)
+		{
+			SPI4_PCLK_DI();
 		}
 	}
-	else
-	{
-		//TODO
-	}
+
 }
 
 
 /*********************************************************************
  * @fn      		  - SPI_Init
- *
- * @brief             -
- *
- * @param[in]         -
- * @param[in]         -
- * @param[in]         -
- *
- * @return            -
- *
- * @Note              -
-
  */
 void SPI_Init(SPI_Handle_t *pSPIHandle)
 {
@@ -114,21 +106,22 @@ void SPI_Init(SPI_Handle_t *pSPIHandle)
 
 /*********************************************************************
  * @fn      		  - SPI_DeInit
- *
- * @brief             -
- *
- * @param[in]         -
- * @param[in]         -
- * @param[in]         -
- *
- * @return            -
- *
- * @Note              -
-
  */
 void SPI_DeInit(SPI_RegDef_t *pSPIx)
 {
- //todo
+	if(pSPIx == SPI1)
+	{
+		SPI1_REG_RESET();
+	}else if(pSPIx == SPI2)
+	{
+		SPI2_REG_RESET();
+	}else if(pSPIx == SPI3)
+	{
+		SPI3_REG_RESET();
+	}else if(pSPIx == SPI4)
+	{
+		SPI4_REG_RESET();
+	}
 }
 
 uint8_t SPI_GetFlagStatus(SPI_RegDef_t *pSPIx , uint32_t FlagName)
@@ -142,17 +135,6 @@ uint8_t SPI_GetFlagStatus(SPI_RegDef_t *pSPIx , uint32_t FlagName)
 
 /*********************************************************************
  * @fn      		  - SPI_SendData
- *
- * @brief             -
- *
- * @param[in]         -
- * @param[in]         -
- * @param[in]         -
- *
- * @return            -
- *
- * @Note              - This is blocking call
-
  */
 void SPI_SendData(SPI_RegDef_t *pSPIx,uint8_t *pTxBuffer, uint32_t Len)
 {
@@ -183,17 +165,6 @@ void SPI_SendData(SPI_RegDef_t *pSPIx,uint8_t *pTxBuffer, uint32_t Len)
 
 /*********************************************************************
  * @fn      		  - SPI_ReceiveData
- *
- * @brief             -
- *
- * @param[in]         -
- * @param[in]         -
- * @param[in]         -
- *
- * @return            -
- *
- * @Note              -
-
  */
 void SPI_ReceiveData(SPI_RegDef_t *pSPIx, uint8_t *pRxBuffer, uint32_t Len)
 {
@@ -225,17 +196,6 @@ void SPI_ReceiveData(SPI_RegDef_t *pSPIx, uint8_t *pRxBuffer, uint32_t Len)
 
 /*********************************************************************
  * @fn      		  - SPI_PeripheralControl
- *
- * @brief             -
- *
- * @param[in]         -
- * @param[in]         -
- * @param[in]         -
- *
- * @return            -
- *
- * @Note              -
-
  */
 void SPI_PeripheralControl(SPI_RegDef_t *pSPIx, uint8_t EnOrDi)
 {
@@ -253,17 +213,6 @@ void SPI_PeripheralControl(SPI_RegDef_t *pSPIx, uint8_t EnOrDi)
 
 /*********************************************************************
  * @fn      		  - SPI_SSIConfig
- *
- * @brief             -
- *
- * @param[in]         -
- * @param[in]         -
- * @param[in]         -
- *
- * @return            -
- *
- * @Note              -
-
  */
 void  SPI_SSIConfig(SPI_RegDef_t *pSPIx, uint8_t EnOrDi)
 {
@@ -281,17 +230,6 @@ void  SPI_SSIConfig(SPI_RegDef_t *pSPIx, uint8_t EnOrDi)
 
 /*********************************************************************
  * @fn      		  - SPI_SSOEConfig
- *
- * @brief             -
- *
- * @param[in]         -
- * @param[in]         -
- * @param[in]         -
- *
- * @return            -
- *
- * @Note              -
-
  */
 void  SPI_SSOEConfig(SPI_RegDef_t *pSPIx, uint8_t EnOrDi)
 {
@@ -310,17 +248,6 @@ void  SPI_SSOEConfig(SPI_RegDef_t *pSPIx, uint8_t EnOrDi)
 
 /*********************************************************************
  * @fn      		  - SPI_IRQInterruptConfig
- *
- * @brief             -
- *
- * @param[in]         -
- * @param[in]         -
- * @param[in]         -
- *
- * @return            -
- *
- * @Note              -
-
  */
 void SPI_IRQInterruptConfig(uint8_t IRQNumber, uint8_t EnorDi)
 {
