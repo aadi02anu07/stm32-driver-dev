@@ -1,12 +1,12 @@
 /*
  * 006spi_tx_testing.c
  *
- *  Created on: July 15, 2025
- *      Author: Aditya
+ *  Created on: Feb 10, 2019
+ *      Author: admin
  */
 
 #include<string.h>
-#include "stm32f446xx.h"
+#include "stm32f407xx.h"
 
 /*
  * PB14 --> SPI2_MISO
