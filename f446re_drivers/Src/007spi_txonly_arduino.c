@@ -1,7 +1,7 @@
 /*
- * 006spi_tx_testing.c
+ * 007spi_txonly_arduino.c
  *
- *  Created on: July 15, 2025
+ *  Created on: June 30, 2025
  *      Author: Aditya
  */
 

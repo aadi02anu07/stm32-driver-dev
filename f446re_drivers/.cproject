@@ -76,14 +76,15 @@
 							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec.702708430" name="MCU Output Converter Motorola S-rec with symbols" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec"/>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.999907113.1545419718" name="006spi_tx_testing.c" rcbsApplicability="disable" resourcePath="Src/006spi_tx_testing.c" toolsToInvoke="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.1851160408.750396237">
-						<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.1851160408.750396237" name="MCU/MPU GCC Compiler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.1851160408"/>
+					<fileInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.999907113.1173646431" name="015uart_tx.c" rcbsApplicability="disable" resourcePath="Src/015uart_tx.c" toolsToInvoke="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.1851160408.341535006">
+						<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.1851160408.341535006" name="MCU/MPU GCC Compiler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.1851160408"/>
 					</fileInfo>
+					<fileInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.999907113.518696708" name="stm32f407xx_i2c_driver.h" rcbsApplicability="disable" resourcePath="drivers/Inc/stm32f446xx_i2c_driver.h" toolsToInvoke=""/>
 					<sourceEntries>
-						<entry excluding="006spi_tx_testing.c|002led_button_f446re.c|001led_toggle_f446re.c|003led_button_ext_f446re.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
+						<entry excluding="001led_toggle.c|002led_button.c|003led_button_ext.c|016uart_case.c|014i2c_slave_tx_string2.c|013i2c_slave_tx_string.c|011i2c_master_rx_testing.c|010i2c_master_tx_testing.c|008spi_cmd_handling.c|001led_toggle_f446re.c|006spi_tx_testing.c|007spi_txonly_arduino.c|002led_button_f446re.c|003led_button_ext_f446re.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Startup"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="drivers/Inc"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="drivers/Src"/>
+						<entry excluding="stm32f407xx_i2c_driver.h" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="drivers/Inc"/>
+						<entry excluding="stm32f407xx_i2c_driver.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="drivers/Src"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

@@ -1,7 +1,7 @@
 /*
  * stm3f446xx.h
  *
- *  Created on: June 20, 2025
+ *  Created on: June 16, 2025
  *      Author: Aditya
  */
 
@@ -649,8 +649,8 @@ typedef struct
 
 #include "stm32f446xx_gpio_driver.h"
 #include "stm32f446xx_spi_driver.h"
-/*
 #include "stm32f446xx_i2c_driver.h"
+#include "stm32f446xx_rcc_driver.h"
 #include "stm32f446xx_usart_driver.h"
-*/
+
 #endif /* INC_STM3F446XX_H_ */

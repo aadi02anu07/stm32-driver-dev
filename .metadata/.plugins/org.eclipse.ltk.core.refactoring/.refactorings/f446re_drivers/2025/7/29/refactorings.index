@@ -1,2 +1,6 @@
 1752484412997	Rename resource 'stm32f407xx_spi_driver.h'
 1752484583322	Rename resource 'stm32f407xx_spi_driver.c'
+1752690369185	Rename resource 'stm32f407xx_i2c_driver.h'
+1752690378473	Rename resource 'stm32f407xx_i2c_driver.c'
+1752856223335	Rename resource 'stm32f407xx_rcc_driver.h'
+1752856230440	Rename resource 'stm32f407xx_rcc_driver.c'

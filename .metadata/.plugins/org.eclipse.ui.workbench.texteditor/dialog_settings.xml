@@ -3,21 +3,21 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="initialise_monitor_handles"/>
+		<item value="char rx_buf[1024];&#x0A;"/>
+		<item value="USART_Set"/>
+		<item value="RCC_GetPCLK1Value"/>
+		<item value="I2C_SR1_AF"/>
+		<item value="SPI_RXNE_FLAG"/>
+		<item value="I2C2"/>
+		<item value="I2C"/>
+		<item value="I2C4"/>
+		<item value="I2C3"/>
+		<item value="else (pI2C =="/>
+		<item value="else if (pI2C =="/>
+		<item value="GpioLed.GPIO_PinConfig.GPIO_PinOPType"/>
 		<item value="Len"/>
 		<item value="TXE"/>
-		<item value="RXNE"/>
-		<item value="void SPI_Init"/>
-		<item value="void GPIO_Init"/>
-		<item value="stm32f407xx"/>
-		<item value="SPIConfig"/>
-		<item value="GPIO_ToggleOutputPin"/>
-		<item value="GpioLed.pGPIOx = GPIOA"/>
-		<item value="GpioLed.pGPIOx = GPIOA;"/>
-		<item value="GPIOA_PCLK_EN"/>
-		<item value="GPIOA_PCLK_E"/>
-		<item value="GPIOA_PCLK_EN()"/>
-		<item value="AHB1ENR"/>
-		<item value="rcc"/>
 	</list>
 	<list key="replacehistory">
 		<item value="stm32f446xx"/>
