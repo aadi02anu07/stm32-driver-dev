@@ -34,31 +34,6 @@ To design and implement low-level embedded drivers for core communication protoc
 
 ---
 
-## 📂 Project Structure
-
-```
-embedded-driver-stm32/
-│
-├── Drivers/
-│   ├── SPI/
-│   ├── I2C/
-│   ├── USART/
-│   └── GPIO/
-│
-├── Core/
-│   ├── main.c
-│   └── startup_stm32f446xx.s
-│
-├── Inc/
-│   ├── stm32f446re.h
-│   └── ...
-│
-├── README.md
-└── LICENSE
-```
-
----
-
 ## 🧪 Hardware Testing
 
 Drivers were tested by interfacing the STM32F446RE board with:
